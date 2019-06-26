@@ -1,0 +1,7 @@
+.ceng {
+  width: 260px;
+  height: 200px;
+  border: 1px solid #ccc;
+  background-image: linear-gradient(to right, orange 50%, green 100%);
+  /* 至于要不要加前缀,要看caniuse网站,如果不支持只能找美工做切图了 */
+}

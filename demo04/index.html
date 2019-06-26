@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>css3伪元素</title>
+</head>
+
+<body>
+  <div class="demo">
+    伪元素 :befor 和 :after 可以做到东西是相当惊人的。
+    对于页面上的每一个元素，你拥有了两个更灵活的，而且
+    可以完成其他Html元素都能完成的东西的元素。他们让一
+    大堆有趣的设计成为可能，而且不会对你的语义标签产生
+    负面影响，这里有
+  </div>
+
+  <div class="demo01">
+    <div class="top">
+      <img src="a.png" alt="" style="width: 100px; height:100px;">
+    </div>
+    <div>玩转css3新特性</div>
+    <div class="top">
+      <img src="b.png" alt="" style="width: 100px; height: 100px;">
+    </div>
+  </div>
+
+  <div class="demo02">
+    玩转css3新特性
+  </div>
+</body>
+
+<style type="text/css">
+  .demo {
+    border: 1px solid #ccc;
+    width: 300px;
+    margin: 50px auto;
+    /* 盒子居中并下沉50px */
+    padding: 10px;
+    /* 盒子内边距 */
+  }
+
+  /* 用于文本 */
+  /* :伪类选择器  ::伪元素,css3之前写一个:就可以，css3之后写两个，为了和伪类选择器区别开 */
+  .demo::first-letter {
+    font-size: 40px;
+    font-weight: bold;
+    float: left;
+  }
+
+  .demo::first-line {
+    color: #f36;
+  }
+
+  /* before after 改变了css布局能力的不足，有了他俩相当于元素多了两个层 */
+  .demo01, .demo02 {
+    width: 300px;
+    border: 1px solid #ccc;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+  }
+  /* content属性是必须有的，即使不放内容，也要设为空 */
+  .demo02::before {
+    content: url(aa.png);
+    display: block;
+    /* width: 100px;
+    height: 100px; */
+  }
+  .demo02::after {
+    content: url(bb.png);
+    display: block;
+    /* width: 100px;
+    height: 100px; */
+  }
+</style>
+
+</html>

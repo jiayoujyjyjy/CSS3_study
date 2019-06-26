@@ -1,0 +1,15 @@
+.ceng {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  animation: myMove 3s infinite;
+  /* 相对于视口定位，否则下面移动无效 */
+  position: fixed;
+}
+@keyframes myMove {
+  0% { top: 0; left: 20%; background-color: red; }
+  25% { top: 0; left: 80%; background-color: black; }
+  50% { top: 80%; left: 80%; background-color: yellow; }
+  75% { top: 80%; left: 20%; background-color: gray; }
+  100% { top: 0; left: 20%; background-color: green; }
+}

@@ -1,0 +1,28 @@
+  /* 盒子就是要他的relative */
+  #heart {
+    width: 100px;
+    height: 90px;
+    position: relative;
+    margin: 100px auto;
+    background-color: #ff0;
+  }
+  #heart::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 80px;
+    border-radius: 50px 40px 0px 0px;
+    background-color: red;
+    /* 设置旋转原点，要加前缀 */
+    transform-origin: 0 100%;
+    transform: rotate(-45deg);
+    left: 50px;
+  }
+
+  #egg {
+    width: 126px;
+    height: 180px;
+    background-color: #fa3;
+    margin: 100px auto;
+    border-radius: 20px;
+  }

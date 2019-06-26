@@ -1,0 +1,38 @@
+body {
+  background-color: #ccc;
+}
+/* 一共需要三个元素,所以需要需要Div标签,两个伪元素.这样刚刚好
+所以就需要在圆上想办法,使得其成为一黑一白两个半圆->边框 */
+#taiji {
+  width: 150px;
+  height: 300px;
+  margin: 100px auto;
+  background-color: white;
+  border-radius: 50%;
+  border-left: 150px solid black;
+  position: relative;
+}
+#taiji::before {
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  padding: 25px;
+  border-radius: 50%;
+  border: 50px solid black;
+  background-color: white;
+  left: -75px;
+  top: 0px;
+}
+#taiji::after {
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  padding: 25px;
+  border-radius: 50%;
+  border: 50px solid white;
+  background-color: black;
+  left: -75px;
+  bottom: 0px;
+}

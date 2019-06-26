@@ -1,0 +1,39 @@
+#star {
+  width: 0px;
+  height: 0px;
+  margin: 150px auto;
+  border-bottom: 70px solid #f00;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-top: 0px solid #f00;
+  transform: rotate(35deg);
+  /* 为了方便子元素(伪元素)定位,要设父元素(主元素)为相对定位，不脱离文档流；
+  这样子元素才可以设绝对定位，即伪元素可以相对于主元素是绝对定位 */
+  position: relative;
+}
+
+/* 画另一个三角，但为了Html语义化，
+css3不同意你新建一个层，
+所以要用到伪元素 */
+#star::before {
+  content: '';
+  width: 0px;
+  height: 0px;
+  border-bottom: 80px solid red;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  transform: rotate(-35deg);
+  position: absolute;
+  top: -45px;
+  left: -65px;
+}
+#star::after {
+  content: '';
+  border-bottom: 70px solid red;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  position: absolute;
+  transform: rotate(-70deg);
+  top: 3px;
+  left: -105px;
+}

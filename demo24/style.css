@@ -1,0 +1,26 @@
+.spinner {
+  width: 60px;
+  height: 60px;
+  margin: 100px auto;
+  position: relative; /* 为了子元素能够绝对定位 */
+}
+.spinner > div {
+  width: 100%; /* 100%让他顶到外部的层 */
+  height: 100%;
+  border-radius: 50%; /* 矩形变圆形 */
+  background-color: #67cf22;
+  opacity: 0.6;
+  position: absolute;
+  top: 0px; /* 两个div位置重叠了 */
+  left: 0px;
+  animation: mymove 2.0s infinite ease-in-out;
+}
+/* 两个div层是同时缩放的，所以没啥效果，故要用部分延时效果，注意一般用负延时 */
+.spinner > div:nth-child(2) {
+  animation-delay: -1s;
+}
+
+@keyframes mymove {
+  0%, 100% {transform: scale(0.0)} /* transform变形 transition过渡 */
+  50% {transform: scale(1.0)}
+}

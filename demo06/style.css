@@ -1,0 +1,9 @@
+.sanjiao {
+  border-top: 50px solid #ccc;
+  border-left: 50px solid transparent;
+  border-bottom: 0px solid transparent;
+  border-right: 50px solid transparent;
+  width: 0px;
+  height: 0px;
+  margin: 50px auto;
+}

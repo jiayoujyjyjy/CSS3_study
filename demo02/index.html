@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>css3伪类选择器</title>
+</head>
+
+<body>
+  <a href="">Pesduo calsses</a><br/>
+  <hr>
+
+  <input type="text"><br/>
+  <input type="text" disabled>
+</body>
+
+<style type="text/css">
+  /* 动态伪类选择器 */
+  a:link {
+    color: #666;
+  }
+  a:visited {
+    color: #f00;
+  }
+  a:hover {
+    color: #000;
+  }
+  a:active {
+    color: #00f;
+  }
+  /* 元素状态可用选择器 */
+  input:enabled {
+    background-color: green;
+  }
+  input:disabled {
+    background-color: red;
+  }
+  /* radius:checked */
+</style>
+</html>

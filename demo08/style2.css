@@ -1,0 +1,29 @@
+/* 正三角，先设底边，上边为空 */
+#star {
+  width: 0px;
+  height: 0px;
+  margin: 100px auto;
+  border-bottom: 100px solid #f00;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 0px solid #f00;
+  /* 为了方便子元素(伪元素)定位,要设父元素(主元素)为相对定位，不脱离文档流；
+  这样子元素才可以设绝对定位，即伪元素可以相对于主元素是绝对定位 */
+  position: relative;
+}
+
+/* 画另一个三角，但为了Html语义化，
+css3不同意你新建一个层，
+所以要用到伪元素 */
+#star::after {
+  content: '';
+  /* 发现伪类宽高不设为0px也可以 */
+  /* width: 0px;
+  height: 0px; */
+  border-top: 100px solid red;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  position: absolute;
+  top: 30px;
+  left: -50px;
+}

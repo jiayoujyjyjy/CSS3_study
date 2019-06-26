@@ -1,0 +1,61 @@
+#zheng {
+  /* 三角形 */
+  /* width: 0px;
+  height: 0px; */
+  /* 梯形 */
+  width: 50px;
+  height: 50px;
+  border-top: 50px solid #f00;
+  border-left: 50px solid #0f0;
+  border-right: 50px solid #00f;
+  border-bottom: 50px solid #ff0;
+}
+
+#wubian {
+  width: 54px;
+  height: 0px;
+  margin: 100px auto;
+  border-top: 50px solid red;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  position: relative;
+}
+#wubian::after {
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-bottom: 35px solid blue;
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  top: -85px;
+  left: -18px;
+}
+
+#six {
+  width: 100px;
+  height: 55px;
+  background-color: red;
+  margin: 100px auto;
+  position: relative;
+}
+#six::before {
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-bottom: 25px solid blue;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  top: -25px;
+}
+#six::after {
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-top: 25px solid blue;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  top: 55px;
+}
